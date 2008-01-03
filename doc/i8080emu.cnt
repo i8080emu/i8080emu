@@ -1,0 +1,46 @@
+:Base i8080emu.hlp
+:Title Эмулятор-отладчик i8080
+1 Введение=IDN_intro
+1 Общие сведения=IDN_general
+1 Возможности программы=IDN_caps
+1 Работа с программой
+2 Ввод программы в память=IDN_putprogram
+2 Ввод данных в эмулятор=IDN_putdata
+2 Загрузка и сохранение данных=IDN_saveload
+2 Запуск и остановка эмуляции=IDN_runstop
+2 Точки останова=IDN_breakpnts
+2 Пошаговое выполнение=IDN_stepexe
+2 Изменение регистров и флагов=IDN_regflag
+2 Сброс и очистка памяти=IDN_reset
+2 Дамп памяти=IDN_memory
+2 Настройка внешнего вида=IDN_outward
+2 Настройка скорости эмуляции=IDN_speed
+1 Команды меню
+2 Меню "Файл"=IDN_filemenu
+2 Меню "Правка"=IDN_editmenu
+2 Меню "Вид"=IDN_viewmenu
+2 Меню "Выполнение"=IDN_exemenu
+2 Меню "Настройка"=IDN_optmenu
+2 Меню "Помощь"=IDN_helpmenu
+1 Диалоговые окна
+2 Диалог адреса загрузки блока=IDN_loadblkdlg
+2 Диалог сохранения блока=IDN_saveblkdlg
+2 Диалог дизассемблирования=IDN_disassmdlg
+2 Диалог изменения регистров и флагов=IDN_regflagdlg
+2 Диалог ввода мнемоники или кодов=IDN_insertdlg
+2 Диалог поиска мнемоники или кодов=IDN_searchdlg
+2 Диалог настройки скорости эмуляции=IDN_speeddlg
+2 Диалог настройки внешнего вида=IDN_outwarddlg
+2 Диалог настройки внешних устройств=IDN_pluginsdlg
+1 Встроенный ассемблер
+2 Общие сведения=IDN_asmgeneral
+2 Синтаксис=IDN_syntax
+2 Директивы ассемблера=IDN_direct
+2 Трансляция программы=IDN_asmcompile
+2 Распечатка текста программы=IDN_asmprint
+1 Справочник команд i8080
+2 По группам=IDN_mnemgr
+2 По алфавиту=IDN_mnemalph
+1 Стандартные модули устройств
+2 Модуль устройства "Спикер"=IDN_plugin_speaker
+2 Модуль устройства "Data Exchanger"=IDN_plugin_exchanger

@@ -1,0 +1,1069 @@
+Error 00001. 0x310000 (Thread 0x0394):
+Bad parameter: A bad memory block (0xA3A5AC) has been passed to the function.
+SysFreeMem(0x009F458C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x00401FA0(=i8080emu.exe:0x01:000FA0)
+   0x400F06A3(=vcl60.bpl:0x01:03F6A3)
+   0x4010ABCD(=vcl60.bpl:0x01:059BCD)
+   0x4010B070(=vcl60.bpl:0x01:05A070)
+   0x400F0851(=vcl60.bpl:0x01:03F851)
+
+------------------------------------------
+Error 00002. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0x9FCFC0) has been passed to the function.
+SysFreeMem(0x00A3EEEC) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+
+------------------------------------------
+Error 00003. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA0020C) has been passed to the function.
+SysFreeMem(0x009FCC88) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400FEDC4(=vcl60.bpl:0x01:04DDC4)
+   0x400EF7A3(=vcl60.bpl:0x01:03E7A3)
+   0x401077EF(=vcl60.bpl:0x01:0567EF)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x4010A623(=vcl60.bpl:0x01:059623)
+
+------------------------------------------
+Error 00004. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2BEDC) has been passed to the function.
+SysFreeMem(0x00A2BA70) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x4010A2F4(=vcl60.bpl:0x01:0592F4)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00005. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2B9B0) has been passed to the function.
+SysFreeMem(0x00A24BA0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC6E2(=vcl60.bpl:0x01:01B6E2)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+
+------------------------------------------
+Error 00006. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA25B08) has been passed to the function.
+SysFreeMem(0x00A24DB8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC6E2(=vcl60.bpl:0x01:01B6E2)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+
+------------------------------------------
+Error 00007. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA25B8C) has been passed to the function.
+SysFreeMem(0x00A24FD0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC6E2(=vcl60.bpl:0x01:01B6E2)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+
+------------------------------------------
+Error 00008. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0x9F4AAC) has been passed to the function.
+SysFreeMem(0x00A11E4C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC04E(=vcl60.bpl:0x01:01B04E)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00009. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA10D3C) has been passed to the function.
+SysFreeMem(0x00A10D3C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00010. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA10D64) has been passed to the function.
+SysFreeMem(0x00A10D64) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00011. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA0C494) has been passed to the function.
+SysFreeMem(0x00A0C494) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00012. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA0C348) has been passed to the function.
+SysFreeMem(0x00A0C348) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00013. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2B970) has been passed to the function.
+SysFreeMem(0x00A12080) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC04E(=vcl60.bpl:0x01:01B04E)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00014. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA25534) has been passed to the function.
+SysFreeMem(0x00A25534) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00015. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2555C) has been passed to the function.
+SysFreeMem(0x00A2555C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00016. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2557C) has been passed to the function.
+SysFreeMem(0x00A2557C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00017. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA10DF8) has been passed to the function.
+SysFreeMem(0x00A10DF8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00018. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA1264C) has been passed to the function.
+SysFreeMem(0x00A122B4) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC04E(=vcl60.bpl:0x01:01B04E)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00019. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA12678) has been passed to the function.
+SysFreeMem(0x00A12678) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00020. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA126A0) has been passed to the function.
+SysFreeMem(0x00A126A0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00021. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA126C0) has been passed to the function.
+SysFreeMem(0x00A126C0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00022. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA124E8) has been passed to the function.
+SysFreeMem(0x00A124E8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00023. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA12550) has been passed to the function.
+SysFreeMem(0x00A12750) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400C91C7(=vcl60.bpl:0x01:0181C7)
+   0x506096BF(=bcbsmp60.bpl:0x01:0086BF)
+   0x4010A2F4(=vcl60.bpl:0x01:0592F4)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+
+------------------------------------------
+Error 00024. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C854) has been passed to the function.
+SysFreeMem(0x00A2C854) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+   0x4010E29E(=vcl60.bpl:0x01:05D29E)
+
+------------------------------------------
+Error 00025. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C87C) has been passed to the function.
+SysFreeMem(0x00A2C87C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+   0x4010E29E(=vcl60.bpl:0x01:05D29E)
+
+------------------------------------------
+Error 00026. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C89C) has been passed to the function.
+SysFreeMem(0x00A2C89C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+   0x4010E29E(=vcl60.bpl:0x01:05D29E)
+
+------------------------------------------
+Error 00027. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C7EC) has been passed to the function.
+SysFreeMem(0x00A2C7EC) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+   0x4010E29E(=vcl60.bpl:0x01:05D29E)
+
+------------------------------------------
+Error 00028. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C774) has been passed to the function.
+SysFreeMem(0x00A2C774) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400BC4F3(=vcl60.bpl:0x01:00B4F3)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+
+------------------------------------------
+Error 00029. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C920) has been passed to the function.
+SysFreeMem(0x00A2C920) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+   0x4010E29E(=vcl60.bpl:0x01:05D29E)
+
+------------------------------------------
+Error 00030. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C948) has been passed to the function.
+SysFreeMem(0x00A2C948) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+   0x4010E29E(=vcl60.bpl:0x01:05D29E)
+
+------------------------------------------
+Error 00031. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C968) has been passed to the function.
+SysFreeMem(0x00A2C968) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+   0x4010E29E(=vcl60.bpl:0x01:05D29E)
+
+------------------------------------------
+Error 00032. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C8B8) has been passed to the function.
+SysFreeMem(0x00A2C8B8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+   0x4010E29E(=vcl60.bpl:0x01:05D29E)
+
+------------------------------------------
+Error 00033. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2C1FC) has been passed to the function.
+SysFreeMem(0x00A2C1FC) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400BC4F3(=vcl60.bpl:0x01:00B4F3)
+   0x40113DB6(=vcl60.bpl:0x01:062DB6)
+   0x4011426C(=vcl60.bpl:0x01:06326C)
+   0x40114686(=vcl60.bpl:0x01:063686)
+   0x50609F87(=bcbsmp60.bpl:0x01:008F87)
+
+------------------------------------------
+Error 00034. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA08670) has been passed to the function.
+SysFreeMem(0x00A04BF8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400FEDC4(=vcl60.bpl:0x01:04DDC4)
+   0x400EF7A3(=vcl60.bpl:0x01:03E7A3)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x4010A623(=vcl60.bpl:0x01:059623)
+   0x40037EEA(=rtl60.bpl:0x01:036EEA)
+
+------------------------------------------
+Error 00035. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0x9F952C) has been passed to the function.
+SysFreeMem(0x00A25684) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC04E(=vcl60.bpl:0x01:01B04E)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00036. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA25C58) has been passed to the function.
+SysFreeMem(0x00A25C58) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00037. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA25C80) has been passed to the function.
+SysFreeMem(0x00A25C80) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00038. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA25CA0) has been passed to the function.
+SysFreeMem(0x00A25CA0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00039. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA25BF0) has been passed to the function.
+SysFreeMem(0x00A25BF0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00040. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA26150) has been passed to the function.
+SysFreeMem(0x00A25CD0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC04E(=vcl60.bpl:0x01:01B04E)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00041. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA26244) has been passed to the function.
+SysFreeMem(0x00A26244) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00042. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2626C) has been passed to the function.
+SysFreeMem(0x00A2626C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00043. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2628C) has been passed to the function.
+SysFreeMem(0x00A2628C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00044. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA261DC) has been passed to the function.
+SysFreeMem(0x00A261DC) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00045. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA26738) has been passed to the function.
+SysFreeMem(0x00A262A8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC04E(=vcl60.bpl:0x01:01B04E)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00046. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA267A0) has been passed to the function.
+SysFreeMem(0x00A267A0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00047. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA267C8) has been passed to the function.
+SysFreeMem(0x00A267C8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00048. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA267E8) has been passed to the function.
+SysFreeMem(0x00A267E8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00049. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA26160) has been passed to the function.
+SysFreeMem(0x00A26160) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00050. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA26E60) has been passed to the function.
+SysFreeMem(0x00A26D78) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400DE253(=vcl60.bpl:0x01:02D253)
+   0x400DDB54(=vcl60.bpl:0x01:02CB54)
+   0x40037EEA(=rtl60.bpl:0x01:036EEA)
+   0x77D38709(=user32.dll:0x01:007709)
+   0x77D387EB(=user32.dll:0x01:0077EB)
+
+------------------------------------------
+Error 00051. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0x9FC7C0) has been passed to the function.
+SysFreeMem(0x00A33D84) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC04E(=vcl60.bpl:0x01:01B04E)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00052. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA30ACC) has been passed to the function.
+SysFreeMem(0x00A30ACC) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00053. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA30AF4) has been passed to the function.
+SysFreeMem(0x00A30AF4) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00054. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA30B14) has been passed to the function.
+SysFreeMem(0x00A30B14) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00055. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA33CC4) has been passed to the function.
+SysFreeMem(0x00A33CC4) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00056. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA10E60) has been passed to the function.
+SysFreeMem(0x00A247C4) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC04E(=vcl60.bpl:0x01:01B04E)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00057. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2FAB0) has been passed to the function.
+SysFreeMem(0x00A2FAB0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00058. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2FAD8) has been passed to the function.
+SysFreeMem(0x00A2FAD8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00059. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2FAF8) has been passed to the function.
+SysFreeMem(0x00A2FAF8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00060. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA28FB8) has been passed to the function.
+SysFreeMem(0x00A28FB8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00061. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2D384) has been passed to the function.
+SysFreeMem(0x00A2CF50) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC04E(=vcl60.bpl:0x01:01B04E)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00062. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2D3B0) has been passed to the function.
+SysFreeMem(0x00A2D3B0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00063. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2D3D8) has been passed to the function.
+SysFreeMem(0x00A2D3D8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00064. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2D3F8) has been passed to the function.
+SysFreeMem(0x00A2D3F8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00065. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2D1F8) has been passed to the function.
+SysFreeMem(0x00A2D1F8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x40114F8D(=vcl60.bpl:0x01:063F8D)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00066. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2D370) has been passed to the function.
+SysFreeMem(0x00A2D414) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x4010A2F4(=vcl60.bpl:0x01:0592F4)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00067. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA28D80) has been passed to the function.
+SysFreeMem(0x00A31210) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400C91C7(=vcl60.bpl:0x01:0181C7)
+   0x4010A2F4(=vcl60.bpl:0x01:0592F4)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+
+------------------------------------------
+Error 00068. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2E6A8) has been passed to the function.
+SysFreeMem(0x00A314F8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400C91C7(=vcl60.bpl:0x01:0181C7)
+   0x4010A2F4(=vcl60.bpl:0x01:0592F4)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+
+------------------------------------------
+Error 00069. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA0C3B0) has been passed to the function.
+SysFreeMem(0x00A31798) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400C91C7(=vcl60.bpl:0x01:0181C7)
+   0x4010A2F4(=vcl60.bpl:0x01:0592F4)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+
+------------------------------------------
+Error 00070. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2DFF4) has been passed to the function.
+SysFreeMem(0x00A34000) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400C91C7(=vcl60.bpl:0x01:0181C7)
+   0x4010A2F4(=vcl60.bpl:0x01:0592F4)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+
+------------------------------------------
+Error 00071. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2564C) has been passed to the function.
+SysFreeMem(0x00A344A4) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400C91C7(=vcl60.bpl:0x01:0181C7)
+   0x4010A2F4(=vcl60.bpl:0x01:0592F4)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+
+------------------------------------------
+Error 00072. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA2D260) has been passed to the function.
+SysFreeMem(0x00A347A8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x4010A2F4(=vcl60.bpl:0x01:0592F4)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+   0x401075BF(=vcl60.bpl:0x01:0565BF)
+
+------------------------------------------
+Error 00073. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA34E7C) has been passed to the function.
+SysFreeMem(0x00A34B68) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC3A6(=vcl60.bpl:0x01:01B3A6)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+
+------------------------------------------
+Error 00074. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA351C4) has been passed to the function.
+SysFreeMem(0x00A34EB0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC3A6(=vcl60.bpl:0x01:01B3A6)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+
+------------------------------------------
+Error 00075. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA3551C) has been passed to the function.
+SysFreeMem(0x00A351F8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC3A6(=vcl60.bpl:0x01:01B3A6)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+
+------------------------------------------
+Error 00076. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA35548) has been passed to the function.
+SysFreeMem(0x00A35560) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC3A6(=vcl60.bpl:0x01:01B3A6)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+
+------------------------------------------
+Error 00077. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA35B84) has been passed to the function.
+SysFreeMem(0x00A3589C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x400CC3A6(=vcl60.bpl:0x01:01B3A6)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A4B3(=vcl60.bpl:0x01:0594B3)
+   0x4010A567(=vcl60.bpl:0x01:059567)
+   0x4010A9A8(=vcl60.bpl:0x01:0599A8)
+
+------------------------------------------
+Error 00078. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0xA3B48C) has been passed to the function.
+SysFreeMem(0x400EBA6C) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x3267D947(=CC3260MT.DLL:0x01:07C947)
+   0x3267D996(=CC3260MT.DLL:0x01:07C996)
+   0x3267AB64(=CC3260MT.DLL:0x01:079B64)
+   0x3267DB6C(=CC3260MT.DLL:0x01:07CB6C)
+
+------------------------------------------
+Error 00079. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0x9F43D0) has been passed to the function.
+SysFreeMem(0x009F43D0) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x3267D947(=CC3260MT.DLL:0x01:07C947)
+   0x3267D996(=CC3260MT.DLL:0x01:07C996)
+   0x3267AB64(=CC3260MT.DLL:0x01:079B64)
+   0x3267DB6C(=CC3260MT.DLL:0x01:07CB6C)
+
+------------------------------------------
+Error 00080. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0x9F43F8) has been passed to the function.
+SysFreeMem(0x009F43F8) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x3267D947(=CC3260MT.DLL:0x01:07C947)
+   0x3267D996(=CC3260MT.DLL:0x01:07C996)
+   0x3267AB64(=CC3260MT.DLL:0x01:079B64)
+   0x3267DB6C(=CC3260MT.DLL:0x01:07CB6C)
+
+------------------------------------------
+Error 00081. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0x9F4418) has been passed to the function.
+SysFreeMem(0x009F4418) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x3267D947(=CC3260MT.DLL:0x01:07C947)
+   0x3267D996(=CC3260MT.DLL:0x01:07C996)
+   0x3267AB64(=CC3260MT.DLL:0x01:079B64)
+   0x3267DB6C(=CC3260MT.DLL:0x01:07CB6C)
+
+------------------------------------------
+Error 00082. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0x9F4368) has been passed to the function.
+SysFreeMem(0x009F4368) 
+
+Call Tree:
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+   0x3267D947(=CC3260MT.DLL:0x01:07C947)
+   0x3267D996(=CC3260MT.DLL:0x01:07C996)
+   0x3267AB64(=CC3260MT.DLL:0x01:079B64)
+   0x3267DB6C(=CC3260MT.DLL:0x01:07CB6C)
+
+------------------------------------------
+Error 00083. 0x310000 (r) (Thread 0x0394):
+Bad parameter: A bad memory block (0x9F4434) has been passed to the function.
+Error 00084. 0x400000 (Thread 0x0394):
+Exception 0xC0000005: Access violation at 0x1.
+Call Tree:
+   0x0CD157B0(=CG32.DLL:0x01:0147B0)
+   0x0CD17126(=CG32.DLL:0x01:016126)
+   0x0CD13FED(=CG32.DLL:0x01:012FED)
+   0x0CD016FE(=CG32.DLL:0x01:0006FE)
+   0x0CD01774(=CG32.DLL:0x01:000774)
+   0x40002FEF(=rtl60.bpl:0x01:001FEF)
+
+------------------------------------------

@@ -1,0 +1,7 @@
+#define	IDD_MAINDIALOG	100
+#define	ID_MIN_EDIT	101
+#define	ID_HOUR_EDIT	102
+#define	ID_START_BUT	103
+#define	ID_STOP_BUT	104
+#define	ID_MIN_UPDOWN	105
+#define	ID_HOUR_UPDOWN	106
