@@ -3,8 +3,8 @@
 <PROJECT>
   <MACROS>
     <VERSION value="BCB.06.00"/>
-    <PROJECT value="..\..\..\plugins\exchange.dll"/>
-    <OBJFILES value="main.obj CfgForm.obj ..\..\Utils.obj"/>
+    <PROJECT value="exchange.dll"/>
+    <OBJFILES value="main.obj CfgForm.obj Utils.obj"/>
     <RESFILES value="exchange.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -20,25 +20,24 @@
       inet.bpi inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
       bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
       indy.bpi"/>
-    <PATHCPP value=".;..\.."/>
+    <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
     <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
-    <USERDEFINES value="_DEBUG"/>
+    <USERDEFINES value=""/>
     <SYSDEFINES value="NO_STRICT;_RTLDLL"/>
     <MAINSOURCE value="exchange.bpf"/>
-    <INCLUDEPATH value="..\..;..\templ;..\speaker;$(BCB)\include;$(BCB)\include\vcl"/>
-    <LIBPATH value="..\..;..\templ;..\speaker;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="..\..;$(BCB)\include;$(BCB)\include\vcl;.."/>
+    <LIBPATH value="..\..;$(BCB)\lib\obj;$(BCB)\lib;.."/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I..\.. -I..\templ -I..\speaker -I$(BCB)\include -I$(BCB)\include\vcl 
-      -src_suffix cpp -D_DEBUG -boa"/>
-    <CFLAG1 value="-WD -vGc -vGt -vGd -Od -Vx -Ve -X- -r- -a8 -4 -b- -k -y -v -vi- -tWD -tWM -c"/>
+    <IDLCFLAGS value="-I..\.. -I$(BCB)\include -I$(BCB)\include\vcl -I.. -src_suffix cpp -boa"/>
+    <CFLAG1 value="-WD -Od -Vx -Ve -X- -r- -a8 -4 -b- -k -y -v -vi- -tWD -tWM -c"/>
     <PFLAGS value="-$Y+ -$W -$O- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mx /w2 /zi"/>
@@ -48,7 +47,7 @@
   <LINKER>
     <ALLOBJ value="c0d32.obj Memmgr.Lib sysinit.obj $(OBJFILES)"/>
     <ALLRES value="$(RESFILES)"/>
-    <ALLLIB value="cg32.lib $(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
     <OTHERFILES value=""/>
   </LINKER>
   <FILELIST>
@@ -56,7 +55,7 @@
       <FILE FILENAME="exchange.bpf" FORMNAME="" UNITNAME="exchange" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="main.cpp" FORMNAME="" UNITNAME="main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="CfgForm.cpp" FORMNAME="ConfigForm" UNITNAME="CfgForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="..\..\Utils.cpp" FORMNAME="" UNITNAME="Utils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Utils.cpp" FORMNAME="" UNITNAME="Utils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
@@ -89,19 +88,17 @@ ProductName=
 ProductVersion=1.0.0.0
 Comments=
 
-[Excluded Packages]
-d:\program files\borland\cbuilder6\Bin\dclclxdb60.bpl=Borland CLX Database Components
-D:\PROGRAM FILES\BORLAND\CBUILDER6\BIN\DCLCLXSTD60.BPL=Borland CLX Standard Components
-
 [HistoryLists\hlIncludePath]
-Count=2
-Item0=..\..;..\templ;..\speaker;$(BCB)\include;$(BCB)\include\vcl
-Item1=$(BCB)\include;$(BCB)\include\vcl
+Count=3
+Item0=$(BCB)\include;$(BCB)\include\vcl;..
+Item1=..\..;..\templ;..\speaker;$(BCB)\include;$(BCB)\include\vcl
+Item2=$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=2
-Item0=..\..;..\templ;..\speaker;$(BCB)\lib\obj;$(BCB)\lib
-Item1=$(BCB)\lib\obj;$(BCB)\lib
+Count=3
+Item0=$(BCB)\lib\obj;$(BCB)\lib;..
+Item1=..\..;..\templ;..\speaker;$(BCB)\lib\obj;$(BCB)\lib
+Item2=$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1
@@ -135,12 +132,12 @@ RemoteDebug=0
 [Compiler]
 ShowInfoMsgs=1
 LinkDebugVcl=0
-LinkCGLIB=1
+LinkCGLIB=0
 
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
 
 [Linker]
 LibPrefix=

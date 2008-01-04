@@ -3,7 +3,7 @@
 <PROJECT>
   <MACROS>
     <VERSION value="BCB.06.00"/>
-    <PROJECT value="..\..\..\plugins\mbr1.dll"/>
+    <PROJECT value="mbr1.dll"/>
     <OBJFILES value="main.obj CfgForm.obj State.obj"/>
     <RESFILES value=""/>
     <IDLFILES value=""/>
@@ -30,13 +30,13 @@
     <USERDEFINES value=""/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="mbr1.bpf"/>
-    <INCLUDEPATH value="..\..;$(BCB)\include;$(BCB)\include\vcl"/>
-    <LIBPATH value="..\..;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl;.."/>
+    <LIBPATH value="$(BCB)\lib\obj;$(BCB)\lib"/>
     <WARNINGS value="-w-par"/>
     <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-src_suffix cpp -I..\.. -I$(BCB)\include -I$(BCB)\include\vcl -boa"/>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -I.. -src_suffix cpp -boa"/>
     <CFLAG1 value="-WD -Od -H=$(BCB)\lib\vcl60.csm -Hc -w -Vx -Ve -X- -a8 -b- -k- -vi -tWD 
       -tWM -c"/>
     <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
@@ -89,14 +89,15 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=2
-Item0=..\..;$(BCB)\include;$(BCB)\include\vcl
-Item1=$(BCB)\include;$(BCB)\include\vcl
+Count=3
+Item0=$(BCB)\include;$(BCB)\include\vcl;..
+Item1=..\..;$(BCB)\include;$(BCB)\include\vcl
+Item2=$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
 Count=2
-Item0=..\..;$(BCB)\lib\obj;$(BCB)\lib
-Item1=$(BCB)\lib\obj;$(BCB)\lib
+Item0=$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\..;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1
@@ -107,12 +108,13 @@ Count=1
 Item0=_DEBUG
 
 [HistoryLists\hlFinalOutputDir]
-Count=2
-Item0=..\
-Item1=..
+Count=3
+Item0=..\..\..\plugins\
+Item1=..\
+Item2=..
 
 [Debugging]
-DebugSourceDirs=$(BCB)\source\vcl
+DebugSourceDirs=
 
 [Parameters]
 RunParams=
@@ -135,11 +137,6 @@ LinkCGLIB=0
 AddServerUnit=1
 AddClientUnit=1
 PrecompiledHeaders=1
-
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=
 
 [Linker]
 LibPrefix=

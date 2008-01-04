@@ -5,7 +5,8 @@
 
 #include <stdio.h>
 #include "CfgForm.h"
-#include "..\..\utils.h"
+#include "Utils.h"
+
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"

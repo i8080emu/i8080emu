@@ -12,8 +12,9 @@
 #include <windows.h>
 #include <inifiles.hpp>
 #pragma hdrstop
-#include "../../kernel/plugin.h"
 #include "CfgForm.h"
+
+#include "core/plugin.h"
 
 /* Описание устройства */
 char description[] = "Data exchanger (exchanger.dll)";
