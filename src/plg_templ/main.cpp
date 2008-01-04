@@ -10,7 +10,7 @@
 #include <windows.h>
 #include <inifiles.hpp>
 #pragma hdrstop
-#include "../../kernel/plugin.h"
+#include "core/plugin.h"
 #include "CfgForm.h"
 
 /* Описание устройства */

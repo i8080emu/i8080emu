@@ -28,7 +28,7 @@
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
     <USERDEFINES value=""/>
-    <SYSDEFINES value="NO_STRICT;_RTLDLL"/>
+    <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="exchange.bpf"/>
     <INCLUDEPATH value="..\..;$(BCB)\include;$(BCB)\include\vcl;.."/>
     <LIBPATH value="..\..;$(BCB)\lib\obj;$(BCB)\lib;.."/>
@@ -45,9 +45,9 @@
     <OTHERFILES value=""/>
   </OPTIONS>
   <LINKER>
-    <ALLOBJ value="c0d32.obj Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLOBJ value="c0d32.obj sysinit.obj $(OBJFILES)"/>
     <ALLRES value="$(RESFILES)"/>
-    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
     <OTHERFILES value=""/>
   </LINKER>
   <FILELIST>
@@ -89,16 +89,18 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=3
-Item0=$(BCB)\include;$(BCB)\include\vcl;..
-Item1=..\..;..\templ;..\speaker;$(BCB)\include;$(BCB)\include\vcl
-Item2=$(BCB)\include;$(BCB)\include\vcl
+Count=4
+Item0=..\..;$(BCB)\include;$(BCB)\include\vcl;..
+Item1=$(BCB)\include;$(BCB)\include\vcl;..
+Item2=..\..;..\templ;..\speaker;$(BCB)\include;$(BCB)\include\vcl
+Item3=$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=3
-Item0=$(BCB)\lib\obj;$(BCB)\lib;..
-Item1=..\..;..\templ;..\speaker;$(BCB)\lib\obj;$(BCB)\lib
-Item2=$(BCB)\lib\obj;$(BCB)\lib
+Count=4
+Item0=..\..;$(BCB)\lib\obj;$(BCB)\lib;..
+Item1=$(BCB)\lib\obj;$(BCB)\lib;..
+Item2=..\..;..\templ;..\speaker;$(BCB)\lib\obj;$(BCB)\lib
+Item3=$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1
