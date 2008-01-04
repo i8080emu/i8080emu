@@ -1,6 +1,6 @@
 object ViewFromForm: TViewFromForm
-  Left = 503
-  Top = 480
+  Left = 361
+  Top = 281
   BorderStyle = bsDialog
   Caption = #1055#1088#1086#1089#1084#1086#1090#1088#1077#1090#1100' '#1089' '#1072#1076#1088#1077#1089#1072
   ClientHeight = 117

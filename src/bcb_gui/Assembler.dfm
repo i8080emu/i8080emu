@@ -1,6 +1,6 @@
 object AsmForm: TAsmForm
-  Left = 255
-  Top = 323
+  Left = 249
+  Top = 296
   Width = 681
   Height = 465
   Caption = #1040#1089#1089#1077#1084#1073#1083#1077#1088

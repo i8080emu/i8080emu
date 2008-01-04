@@ -1,6 +1,6 @@
 object AboutForm: TAboutForm
-  Left = 330
-  Top = 186
+  Left = 361
+  Top = 196
   BorderStyle = bsDialog
   Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
   ClientHeight = 315
@@ -58,14 +58,14 @@ object AboutForm: TAboutForm
     Top = 40
     Width = 58
     Height = 13
-    Caption = #1042#1077#1088#1089#1080#1103': 1.1'
+    Caption = #1042#1077#1088#1089#1080#1103': 1.2'
   end
   object Label6: TLabel
     Left = 8
     Top = 56
-    Width = 116
+    Width = 100
     Height = 13
-    Caption = #1044#1072#1090#1072': 21 '#1084#1072#1088#1090#1072' 2004 '#1075'.'
+    Caption = #1044#1072#1090#1072': 4 '#1103#1085#1074'. 2008 '#1075'.'
   end
   object Label7: TLabel
     Left = 8
