@@ -1,0 +1,5 @@
+ORG 5
+DCR B
+NOP
+MOV A,B
+MOV B,A

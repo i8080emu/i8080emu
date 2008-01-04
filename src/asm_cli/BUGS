@@ -1,0 +1,7 @@
+If you mean that i8080asm works incorrect, you can enable debugging:
+
+./i8080asm --debug-level=3 file.asm
+
+and look debug messages (level 3 - max debugging messages).
+
+If it really incorrect, please send 'file.asm' to me for fix this bug.

@@ -1,0 +1,2 @@
+NUM EQU 0X22
+DB NUM

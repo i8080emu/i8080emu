@@ -1,0 +1,2 @@
+num equ 0x22
+DB num

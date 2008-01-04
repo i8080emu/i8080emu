@@ -1,0 +1,3 @@
+* re-write asm_process function without unnessasary scan_mnem function
+* Otcal constants: 01, 07, 007, 0777.
+* Binnary constant: may be in format 0%00110011 (don't know yet)

@@ -1,0 +1,10 @@
+  i8080asm installation instruction
+
+
+Type
+
+  make
+  
+for build it. If build sussefuly, you can use it immediate:
+
+./i8080asm -o myfile.bin myfile.asm

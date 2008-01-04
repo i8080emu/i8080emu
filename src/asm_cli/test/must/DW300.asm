@@ -1,0 +1,4 @@
+ORG 0X1234
+
+LOOP:
+DW LOOP

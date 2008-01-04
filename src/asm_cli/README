@@ -1,0 +1,60 @@
+  i8080 Assembler
+
+
+i8080asm is assembler for Intel 8080 processor.
+
+
+
+Examples of usage:
+  
+./i8080asm file.asm -o file.bin
+
+This assemble 'file.asm' to 'file.bin'
+
+
+
+Assembler syntax:
+
+Numbers:
+
+12, 13, 1, 7, 100		- dec
+0x0a, 0x1, 0x000, 0x100		- hex
+
+Labels:
+
+Case insentivity, alphabetic symbols, numbers (but not first) and '_', max 8 chars
+
+Valib labels:
+  LABEL
+  LABEL:   (the same, : ignored)
+  label    (the same, case ignored)
+  LaBel    (the same, case ignored)
+  _LABEL
+  M001     (or M001: )
+
+Invalid labels:
+
+  123      (first number)
+  1TH_LOOP (first number)
+  
+Attention: 'Label1234567890' is equvalent to 'Label123' - 8 chars signed
+  
+
+Mnemonics:
+
+  dcr b
+  call 0x1000
+  call LOOP - 0x10
+  mvi a, 0x12 / 5  
+
+
+
+
+
+
+Code samples:
+
+  See .asm files in 'test' folder. 
+You can run './test.sh' script for check that all of theses scripts 
+assembled fine.
+
