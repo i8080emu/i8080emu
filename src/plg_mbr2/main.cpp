@@ -8,7 +8,7 @@
 #include "CfgForm.h"
 #include "State.h"
 
-#include "../../kernel/plugin.h"
+#include "core/plugin.h"
 
 /* Описание устройства */
 char description[] = "Многорежимный буферный регистр (mbr.dll)";

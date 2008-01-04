@@ -11,7 +11,7 @@
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) CfgForm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value=""/>
+    <LIBRARIES value="rtl.lib vcl.lib"/>
     <SPARELIBS value="vcl.lib rtl.lib"/>
     <PACKAGES value="rtl.bpi visualclx.bpi vcl.bpi bcb2kaxserver.bpi dbrtl.bpi adortl.bpi 
       vcldb.bpi vclx.bpi bdertl.bpi vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi 
@@ -28,7 +28,7 @@
     <RELEASELIBPATH value="$(BCB)\lib\release"/>
     <LINKER value="ilink32"/>
     <USERDEFINES value=""/>
-    <SYSDEFINES value="NO_STRICT;_RTLDLL;USEPACKAGES"/>
+    <SYSDEFINES value="NO_STRICT;_RTLDLL"/>
     <MAINSOURCE value="speaker.bpf"/>
     <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl;.."/>
     <LIBPATH value="$(BCB)\lib\obj;$(BCB)\lib"/>
@@ -37,8 +37,8 @@
   </MACROS>
   <OPTIONS>
     <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -I.. -src_suffix cpp -boa"/>
-    <CFLAG1 value="-WD -vGc -vGt -vGd -O2 -H=$(BCB)\lib\vcl60.csm -Hc -Q -Vx -Ve -X- -a8 -b- 
-      -k- -vi -tWD -tWM -c"/>
+    <CFLAG1 value="-WD -O2 -H=$(BCB)\lib\vcl60.csm -Hc -Q -Vx -Ve -X- -a8 -b- -k- -vi -tWD 
+      -tWM -c"/>
     <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mx /w2 /zn"/>
@@ -46,9 +46,9 @@
     <OTHERFILES value=""/>
   </OPTIONS>
   <LINKER>
-    <ALLOBJ value="c0d32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLOBJ value="c0d32.obj Memmgr.Lib sysinit.obj $(OBJFILES)"/>
     <ALLRES value="$(RESFILES)"/>
-    <ALLLIB value="cg32.lib $(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
     <OTHERFILES value=""/>
   </LINKER>
   <FILELIST>
@@ -112,7 +112,7 @@ Item1=..\..\..\plugins\
 Item2=..
 
 [Debugging]
-DebugSourceDirs=$(BCB)\source\vcl
+DebugSourceDirs=
 
 [Parameters]
 RunParams=
@@ -129,7 +129,7 @@ RemoteDebug=0
 [Compiler]
 ShowInfoMsgs=1
 LinkDebugVcl=0
-LinkCGLIB=1
+LinkCGLIB=0
 
 [CORBA]
 AddServerUnit=1
