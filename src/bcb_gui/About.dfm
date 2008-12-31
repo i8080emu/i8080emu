@@ -58,14 +58,14 @@ object AboutForm: TAboutForm
     Top = 40
     Width = 58
     Height = 13
-    Caption = #1042#1077#1088#1089#1080#1103': 1.2'
+    Caption = #1042#1077#1088#1089#1080#1103': 1.3'
   end
   object Label6: TLabel
     Left = 8
     Top = 56
     Width = 100
     Height = 13
-    Caption = #1044#1072#1090#1072': 4 '#1103#1085#1074'. 2008 '#1075'.'
+    Caption = #1044#1072#1090#1072': 1 '#1103#1085#1074'. 2009 '#1075'.'
   end
   object Label7: TLabel
     Left = 8
