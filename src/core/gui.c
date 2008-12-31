@@ -267,7 +267,7 @@ void draw_flags(HDC hdc,RECT *r)
   DrawText(hdc,buf,-1,r,DT_LEFT);
 
   r->top += font_height;
-  sprintf(buf, " P = %d", (i8080.af.b.l & 0x04) >> 2);
+  sprintf(buf, " P  = %d", (i8080.af.b.l & 0x04) >> 2);
   DrawText(hdc,buf,-1,r,DT_LEFT);
 
   r->top += font_height;
@@ -275,11 +275,11 @@ void draw_flags(HDC hdc,RECT *r)
   DrawText(hdc,buf,-1,r,DT_LEFT);
 
   r->top += font_height;
-  sprintf(buf, " Z = %d", (i8080.af.b.l & 0x40) >> 6);
+  sprintf(buf, " Z  = %d", (i8080.af.b.l & 0x40) >> 6);
   DrawText(hdc,buf,-1,r,DT_LEFT);
 
   r->top += font_height;
-  sprintf(buf, " S = %d", (i8080.af.b.l & 0x80) >> 7);
+  sprintf(buf, " S  = %d", (i8080.af.b.l & 0x80) >> 7);
   DrawText(hdc,buf,-1,r,DT_LEFT);
 }
 

@@ -279,7 +279,7 @@ object LookOptForm: TLookOptForm
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Fixedsys'
     Font.Style = []
     MinFontSize = 0
     MaxFontSize = 0
