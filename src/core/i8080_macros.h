@@ -57,7 +57,7 @@
   A=adctemp;\
   F = ( adctemp & 0x100 ? FLAG_C : 0 ) |\
     halfcarry_add_table[lookup & 0x07] | overflow_add_table[lookup >> 4] |\
-    sz53_table[A];\
+    sz53p_table[A];\
 }
 
 #define ADC16(value)\
@@ -82,7 +82,7 @@
   A=addtemp;\
   F = ( addtemp & 0x100 ? FLAG_C : 0 ) |\
     halfcarry_add_table[lookup & 0x07] | overflow_add_table[lookup >> 4] |\
-    sz53_table[A];\
+    sz53p_table[A];\
 }
 
 #define ADD16(value1,value2)\
@@ -125,7 +125,7 @@
 {\
   F = ( F & FLAG_C ) | ( (value)&0x0f ? 0 : FLAG_AC ) | FLAG_1;\
   (value)--;\
-  F |= ( (value)==0x79 ? FLAG_P : 0 ) | sz53_table[value];\
+  F |= ( (value)==0x79 ? FLAG_P : 0 ) | sz53p_table[value];\
 }
 
 // увеличение регистра на единицу
@@ -134,7 +134,7 @@
   (value)++;\
   F = ( F & FLAG_C ) | ( (value)==0x80 ? FLAG_P : 0 ) |\
   ( (value)&0x0f ? 0 : FLAG_AC ) | ( (value) ? 0 : FLAG_Z ) |\
-  sz53_table[(value)];\
+  sz53p_table[(value)];\
 }
 
 #define LD16_NNRR(regl,regh)\
@@ -231,7 +231,7 @@ do{\
   A=sbctemp;\
   F = ( sbctemp & 0x100 ? FLAG_C : 0 ) | FLAG_1 |\
     halfcarry_sub_table[lookup & 0x07] | overflow_sub_table[lookup >> 4] |\
-    sz53_table[A];\
+    sz53p_table[A];\
 }
 
 #define SBC16(value)\
@@ -284,7 +284,7 @@ do{\
   A=subtemp;\
   F = ( subtemp & 0x100 ? FLAG_C : 0 ) | FLAG_1 |\
     halfcarry_sub_table[lookup & 0x07] | overflow_sub_table[lookup >> 4] |\
-    sz53_table[A];\
+    sz53p_table[A];\
 }
 
 #define XOR(value)\
