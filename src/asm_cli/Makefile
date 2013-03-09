@@ -16,6 +16,12 @@ i8080asm: main.o asm.o
 asm.o: asm.c asm.h
 main.o: main.c asm.h
 
+asm.c:
+	ln -s ../core/asm.c
+asm.h:
+	ln -s ../core/asm.h
+
+
 clean:
 	rm -f *~ *.o
 	rm -f test/res/*
