@@ -1,35 +1,37 @@
 #ifndef _I8080_ASM_H
 #define _I8080_ASM_H
 
-#define FMAXLEN 63      // максимальное число символов в поле
 #define MAXLABELCHARS 8 // максимальное число символов в имени метки
 
 typedef unsigned char	BYTE;
 typedef unsigned short	WORD;
 
 typedef enum {
-ASMERR_NOERROR,
-ASMERR_LABEL,
-ASMERR_MNEM,
-ASMERR_BADARG,
-ASMERR_ORG,
-ASMERR_ONEPRINTSYM,
-ASMERR_BAD_DB,
-ASMERR_DUPLABEL,
-ASMERR_BADSYM,
-ASMERR_BADLABEL,
-ASMERR_TOOBIG,
-ASMERR_EXTRAARG,
-ASMERR_BADSYNTAX,
-ASMERR_NOT_CLOSED_QUOTE
+  ASMERR_NOERROR,
+  ASMERR_LABEL,
+  ASMERR_MNEM,
+  ASMERR_BADARG,
+  ASMERR_ORG,
+  ASMERR_ONEPRINTSYM,
+  ASMERR_BAD_DB,
+  ASMERR_DUPLABEL,
+  ASMERR_BADSYM,
+  ASMERR_BADLABEL,
+  ASMERR_TOOBIG,
+  ASMERR_EXTRAARG,
+  ASMERR_BADSYNTAX,
+  ASMERR_NOT_CLOSED_QUOTE
 } asmerr_t;
 
-typedef struct tag_label label_t;
-typedef struct tag_label {
+//typedef struct tag_label label_t;
+
+struct tag_label {
   char name[MAXLABELCHARS+1];
   WORD value;
-  label_t *next;
-} label_t;
+  struct tag_label *next;
+};
+
+typedef struct tag_label label_t;
 
 typedef struct {
   BYTE *mem;      /* указатель на виртуальную память, в которую транслировать */
@@ -37,7 +39,7 @@ typedef struct {
   int org;        /* начальный адрес компиляции */
   int mult_org;   /* флаг установлен, если больше чем одна директива org */
   int codegen;    /* 0-первый проход, 1-второй проход, генерация кода включена */
-  int prep_only;  /* только препроцесс (для консольной версии */
+  int prep_only;  /* только препроцессинг строк, без парсинга */
   label_t *labels;  /* список меток */
 } ASMSESSION;
 
@@ -46,7 +48,7 @@ typedef struct {
 #endif  /* __cplusplus */
 
 /* Возвращает описание ошибки по ее коду */
-char* asm_get_error_text (asmerr_t errcode);
+char* asm_get_error_text(asmerr_t errcode);
 
 /* Начало процесса ассемблирование, инициализация структуры */
 void asm_start(ASMSESSION *asmsess, void *virtual_memory);

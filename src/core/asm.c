@@ -1,18 +1,17 @@
-/* i8080 assembler
- (the part of i8080emu)
-*/
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
-#include <ctype.h>
 #include <string.h>
-#include <malloc.h>
+#include <ctype.h>
+
 #include "asm.h"
+
 
 /* 0 - no debug, 3 - max level */
 extern int DEBUG_LEVEL;
 
 /* Размер буфера для считывания чисел и меток */
-#define BUFSIZE 16
+const int BUFSIZE = 16;
 
 
 /* Look also asmerr_t in asm.h */
@@ -64,7 +63,7 @@ typedef struct
   operand_t op1;		/* тип первого операнда */
   operand_t op2;		/* тип второго операнд */
   BYTE opcode;			/* код команды (если в коде есть биты,
-     обозначающие операнды, то они должны быть равны нулю */
+				   обозначающие операнды, то они должны быть равны нулю */
 }
 OPS;
 
@@ -160,6 +159,7 @@ DEBUG (int level, const char *format, ...)
   va_end (p);
 }
 
+int label_getvalue (ASMSESSION * asmsess, char *label);
 
 
 
@@ -187,7 +187,7 @@ put_in_mem (ASMSESSION * asmsess, WORD addr, BYTE value)
 /* Функция prepare_line
    Предварительная подготовка строки перед ассемблированием.
    Изменяет исходную строку, делая следующие изменения:
-     * удаляет лишние пробелы, заменяя их одним символом пробела где нужно и
+     * удаляет лишние пробелы, заменяя их одним символом пробела где нужно и 
        удаляет пробелы где они не нужны
      * пробелы до и после запятой убираются
      * преобразует маленькие английские буквы в большие
@@ -307,9 +307,6 @@ prepare_line (char *source_line)
 
 /* ======= LABELS =========== */
 
-int
-label_getvalue (ASMSESSION * asmsess, char *label);
-
 /* Проверка, может ли этот символ учавствовать в имени метки.
    Возвращает true если может, false если нет */
 static int
@@ -343,7 +340,6 @@ static int
 is_valid_label (char *label)
 {
   int n;
-  char *p;
 
   DEBUG (2, "is_valid_label: check label=%s\n", label);
 
@@ -409,7 +405,6 @@ label_add (ASMSESSION * asmsess, char *label, WORD value)
   return 1;
 }
 
-
 /* Взять значение метки.
   Если метка найдена, то возвращается ее значение (от 0x0000 до 0xffff)
   Если не найдена, возвращает -1
@@ -418,8 +413,8 @@ int
 label_getvalue (ASMSESSION * asmsess, char *label)
 {
   label_t *find;
-  char buf[MAXLABELCHARS + 1];
-  int n;
+//  char buf[MAXLABELCHARS + 1];
+//  int n;
 
   if (label == NULL)
     {
@@ -442,7 +437,6 @@ label_getvalue (ASMSESSION * asmsess, char *label)
     }
   return -1;
 }
-
 
 /* Освобождение списка меток */
 void
@@ -621,8 +615,9 @@ get_nummeric_arg (ASMSESSION * asmsess, int *arg, char **line)
 {
   char *cp;
   int value, i;
-  char buf[BUFSIZE], d;
+  char buf[BUFSIZE];
   char action;			/* знак арифметического действия */
+//  char d;
 
   /* При первом проходе возвращаем любое число */
   if (!asmsess->codegen)
@@ -798,7 +793,7 @@ parse_mnem (ASMSESSION * asmsess, int mnem_index, int ccc_index, char *line)
     case OP_BYTE:
     case OP_WORD:
       fprintf (stderr,
-	       "Ошибка в таблице команд ассемблера: строка %в (мнемоника %s): операнды OP_BYTE или OP_WORD не могут быть первым аргументом!",
+	       "Ошибка в таблице команд ассемблера: строка %d (мнемоника %s): операнды OP_BYTE или OP_WORD не могут быть первым аргументом!",
 	       mnem_index, comands[mnem_index].mnem);
       ret = ASMERR_BADARG;
       goto exit;
@@ -1185,7 +1180,7 @@ asm_process (ASMSESSION * asmsess, char *line)
 {
   asmerr_t err;
   char *label = NULL;		// label in this line (for EQU directive)
-  WORD label_addr;		// address of label in this line (for EQU directive)
+  WORD label_addr = 0;	// address of label in this line (for EQU directive)
   int i, ccc_i;
   char *field, d;
 
@@ -1211,9 +1206,9 @@ asm_process (ASMSESSION * asmsess, char *line)
 	        err = ASMERR_NOERROR;
 		      goto exit;
 		          }
-  
 
-  
+
+
   field = get_field (&line, &d);
   DEBUG (3, "asm_process: field=%s line=%s\n", field, line);
 
