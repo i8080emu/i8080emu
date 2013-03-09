@@ -194,7 +194,7 @@ end:
   asm_end (&as);
   fclose (fpin);
 
-  // выводим результат
+  /* print the result */
   if (error_count > 0)
     {
       fprintf (stderr, "%s: Found %d error(s)\n", arguments.input_file, error_count);
