@@ -2,12 +2,29 @@
 #
 # Create archives for upload to site
 #
+# Requires:
+# * MSYS (only base system)
+# * zip (mingw-get.exe install msys-zip)
+# * borland C++ builder of cause
+#
+# Before run this script:
+# * compile manually i8080 and plugins (at least com_port and speaker)
+# * compile help file (see doc/readme.txt)
+#
+# How to run this script:
+# * Start/All Programms/MinGW/MinGW Shell
+# * cd /c/i8080
+# * makedist.sh
 
 set -e
 
-AR_BIN=i8080emu.zip
-AR_SRC=i8080emu-src.zip
-rm -f $AR_BIN $AR_SRC
+
+#TDUMP="wine tdump.exe"
+TDUMP="/c/Program Files/Borland/CBuilder6/Bin/tdump.exe"
+
+OUTPUT_BIN=i8080emu.zip
+OUTPUT_SRC=i8080emu-src.zip
+rm -f $OUTPUT_BIN $OUTPUT_SRC
 
 rm -rf dist-bin
 mkdir  dist-bin
@@ -27,7 +44,7 @@ cp examples/*.asm                dist-bin/examples
 cp AUTHORS BUGS ChangeLog TODO   dist-bin
 cp COPYING                       dist-bin
 
-(cd dist-bin ; zip -r ../$AR_BIN *)
+( cd dist-bin ; zip -r ../$OUTPUT_BIN * )
 
 rm -rf dist-bin
 
@@ -36,17 +53,16 @@ echo "Make source archive"
 
 sh src/clean.sh
 
-zip $AR_SRC AUTHORS BUGS ChangeLog COPYING doc images \
+zip $OUTPUT_SRC AUTHORS BUGS ChangeLog COPYING doc images \
             readme.html screenshot.png TESTING TODO
 
-zip -r $AR_SRC src doc examples images -x '*CVS/*' -x '*.exe' -x '*.dll' -x '*.hlp' -x '*~'
+zip -r $OUTPUT_SRC src doc examples images -x '*CVS/*' -x '*.exe' -x '*.dll' -x '*.hlp' -x '*~'
 
 echo Visual test distributive:
 echo Libraries use:
-wine tdump.exe src/i8080emu.exe  | grep "Imports from"
+"$TDUMP" src/i8080emu.exe  | grep "Imports from"
 
 for p in $PLUGINS ; do
   echo "Imports in $p"
-  wine tdump.exe -em. $p | grep 'IMPORT:'
+  "$TDUMP" -em. $p | grep 'IMPORT:'
 done
-
