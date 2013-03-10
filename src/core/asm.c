@@ -11,7 +11,9 @@
 extern int DEBUG_LEVEL;
 
 /* Размер буфера для считывания чисел и меток */
-const int BUFSIZE = 16;
+// Borland 6 requires 'constant expression'
+#define BUFSIZE 16
+//const int BUFSIZE = 16;
 
 
 /* Look also asmerr_t in asm.h */
