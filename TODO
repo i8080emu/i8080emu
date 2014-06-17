@@ -18,7 +18,7 @@
  (PCI-устройства под Win 98/ME/2000 с использованием архитектуры драйверов WDM и пакета NuMega DriverStudio.)
 
  альтернатива: напрямую выводить в порт (также, как и в предыдущем проекте), используя 16 бит dll
- и DOS Protected Mode Interface (DPMI) 
+ и DOS Protected Mode Interface (DPMI)
  Т.е. в этой dll будет казаться, как будто это сессия доса.
 
 * Тестовая программа для спикера (проигрывание мелодии, например, или звуковой эффект типа лазер или пулеметная очередь).
@@ -27,4 +27,11 @@
 * Добавить пример работы с МБР (многофункциональный буферный регистр)
 
 * Избавиться от Borland Builder, передти на Qt или GTK+
+  src/qmake.pro   - SUBDIRS
+     cli - cli tool
+     bcb_gui - leave as is
+     qt_gui - new folder
+     core - static library
+     plugins - dynamic libraries
+  Use QLibrary for loading plugins.
 
