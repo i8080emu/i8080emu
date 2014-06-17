@@ -3,7 +3,7 @@
 
 #define CM_ISBREAK (WM_APP + 400)
 
-/* Максимальное число шестнадцатиричных чисел для поиска и ввода */
+/* РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ С€РµСЃС‚РЅР°РґС†Р°С‚РёСЂРёС‡РЅС‹С… С‡РёСЃРµР» РґР»СЏ РїРѕРёСЃРєР° Рё РІРІРѕРґР° */
 #define MAX_HEX_SEQUENCE 10
 
 /* The various severities of error level, increasing downwards */
@@ -12,9 +12,9 @@ typedef enum ui_error_level {
   UI_ERROR_ERROR,		/* An actual error */
 } ui_error_level;
 
-/* Список элементов у которых можно изменить цвет в опциях
-   Он должен совпадать со списком в ElementListBox
-   в диалоге выбора цветов.
+/* РЎРїРёСЃРѕРє СЌР»РµРјРµРЅС‚РѕРІ Сѓ РєРѕС‚РѕСЂС‹С… РјРѕР¶РЅРѕ РёР·РјРµРЅРёС‚СЊ С†РІРµС‚ РІ РѕРїС†РёСЏС…
+   РћРЅ РґРѕР»Р¶РµРЅ СЃРѕРІРїР°РґР°С‚СЊ СЃРѕ СЃРїРёСЃРєРѕРј РІ ElementListBox
+   РІ РґРёР°Р»РѕРіРµ РІС‹Р±РѕСЂР° С†РІРµС‚РѕРІ.
  */
 enum gui_colors{
 GUI_WHTSPC,
@@ -26,23 +26,23 @@ GUI_CURPNT,
 GUI_BRKPNT,
 };
 
-/* число элементов в списке цветов */
+/* С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІ СЃРїРёСЃРєРµ С†РІРµС‚РѕРІ */
 #define GUI_NUMCOLORS 7
 #define GUI_NUMSHEMES 4
 
-/* Структура, определяющая цвет и фон элемента */
+/* РЎС‚СЂСѓРєС‚СѓСЂР°, РѕРїСЂРµРґРµР»СЏСЋС‰Р°СЏ С†РІРµС‚ Рё С„РѕРЅ СЌР»РµРјРµРЅС‚Р° */
 typedef struct {
   COLORREF ink;
   COLORREF paper;
 } GUI_COLOR;
 
-/* Текущие настройки цветовых схем */
+/* РўРµРєСѓС‰РёРµ РЅР°СЃС‚СЂРѕР№РєРё С†РІРµС‚РѕРІС‹С… СЃС…РµРј */
 extern GUI_COLOR gui_color[GUI_NUMSHEMES][GUI_NUMCOLORS];
 
-/* Номер выбраной цветовой схемы */
+/* РќРѕРјРµСЂ РІС‹Р±СЂР°РЅРѕР№ С†РІРµС‚РѕРІРѕР№ СЃС…РµРјС‹ */
 extern int gui_sheme;
 
-/* Шрифт и размер для главного окна */
+/* РЁСЂРёС„С‚ Рё СЂР°Р·РјРµСЂ РґР»СЏ РіР»Р°РІРЅРѕРіРѕ РѕРєРЅР° */
 extern char *gui_font_family;
 extern int gui_font_size;
 
@@ -55,16 +55,16 @@ int ui_error( ui_error_level severity, const char *format, ... );
 
 void gui_init(HWND main);
 
-void gui_draw(HDC hdc, RECT *crect);  // рисование всей области окна
-void gui_scroll(int diff);      // изменение полосы прокрутки
-void gui_click(int y);          // щелчок по области дизасемблера
+void gui_draw(HDC hdc, RECT *crect);  // СЂРёСЃРѕРІР°РЅРёРµ РІСЃРµР№ РѕР±Р»Р°СЃС‚Рё РѕРєРЅР°
+void gui_scroll(int diff);      // РёР·РјРµРЅРµРЅРёРµ РїРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё
+void gui_click(int y);          // С‰РµР»С‡РѕРє РїРѕ РѕР±Р»Р°СЃС‚Рё РґРёР·Р°СЃРµРјР±Р»РµСЂР°
 
-void gui_up(void);              // курсор на одну позицию вверх
-void gui_down(void);            // курсор на одну позицию вниз
-void gui_pageup(void);          // курсор на страницу вверх
-void gui_pagedown(void);        // курсор на страницу вниз
+void gui_up(void);              // РєСѓСЂСЃРѕСЂ РЅР° РѕРґРЅСѓ РїРѕР·РёС†РёСЋ РІРІРµСЂС…
+void gui_down(void);            // РєСѓСЂСЃРѕСЂ РЅР° РѕРґРЅСѓ РїРѕР·РёС†РёСЋ РІРЅРёР·
+void gui_pageup(void);          // РєСѓСЂСЃРѕСЂ РЅР° СЃС‚СЂР°РЅРёС†Сѓ РІРІРµСЂС…
+void gui_pagedown(void);        // РєСѓСЂСЃРѕСЂ РЅР° СЃС‚СЂР°РЅРёС†Сѓ РІРЅРёР·
 
-/* Команды меню */
+/* РљРѕРјР°РЅРґС‹ РјРµРЅСЋ */
 void gui_file_clearmem(void);
 void gui_file_loadimage(char *filename);
 void gui_file_saveimage(char *filename);
@@ -72,9 +72,9 @@ void gui_file_loadblock(char *filename, int addr);
 void gui_file_loadbin(char *filename, int addr, int len);
 void gui_file_saveblock(char *filename, int addr, int len);
 
-void gui_view_from(WORD addr);  // просмотр с заданого адреса
-void gui_view_find(BYTE *data, int len);  /* поиск последовательности */
-void gui_view_put(BYTE *data, int len);  /* ввод последовательности */
+void gui_view_from(WORD addr);  // РїСЂРѕСЃРјРѕС‚СЂ СЃ Р·Р°РґР°РЅРѕРіРѕ Р°РґСЂРµСЃР°
+void gui_view_find(BYTE *data, int len);  /* РїРѕРёСЃРє РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё */
+void gui_view_put(BYTE *data, int len);  /* РІРІРѕРґ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё */
 
 void gui_run_reset(void);
 void gui_run_stepinto(void);

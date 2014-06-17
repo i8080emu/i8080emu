@@ -1,6 +1,6 @@
-/* Этот файл содержит реализацию интерфейса,
-*  позволяющего программе дизасемблировать коды команд
-*  микропроцессора К580.
+/* Р­С‚РѕС‚ С„Р°Р№Р» СЃРѕРґРµСЂР¶РёС‚ СЂРµР°Р»РёР·Р°С†РёСЋ РёРЅС‚РµСЂС„РµР№СЃР°,
+*  РїРѕР·РІРѕР»СЏСЋС‰РµРіРѕ РїСЂРѕРіСЂР°РјРјРµ РґРёР·Р°СЃРµРјР±Р»РёСЂРѕРІР°С‚СЊ РєРѕРґС‹ РєРѕРјР°РЅРґ
+*  РјРёРєСЂРѕРїСЂРѕС†РµСЃСЃРѕСЂР° Рљ580.
 */
 #include <windows.h>
 #include <stdio.h>
@@ -10,29 +10,29 @@
 #include "gui.h"
 
 
-// названия регистров (для команд с регистровыми операндами)
+// РЅР°Р·РІР°РЅРёСЏ СЂРµРіРёСЃС‚СЂРѕРІ (РґР»СЏ РєРѕРјР°РЅРґ СЃ СЂРµРіРёСЃС‚СЂРѕРІС‹РјРё РѕРїРµСЂР°РЅРґР°РјРё)
 char *reg_name[8] = { "B","C","D","E","H","L","M","A" };
 
-// названия регистровых пар
+// РЅР°Р·РІР°РЅРёСЏ СЂРµРіРёСЃС‚СЂРѕРІС‹С… РїР°СЂ
 char *pair_name[4] = { "B","D","H","SP" };
 
-// названия регистровых пар для push и pop
+// РЅР°Р·РІР°РЅРёСЏ СЂРµРіРёСЃС‚СЂРѕРІС‹С… РїР°СЂ РґР»СЏ push Рё pop
 char *pair_pushpop[4] = { "B","D","H","PSW" };
 
-// названия условий
+// РЅР°Р·РІР°РЅРёСЏ СѓСЃР»РѕРІРёР№
 char *ccc_name[8] = {"NZ","Z","NC","C","PO","PE","P","M"};
 
 typedef enum {
-OP_NONE,      // нет операнда
-OP_REG,       // регистровый операнд (если это op1 то DDD если op2 то SSS)
-OP_REGPAIR,   // регистровые пары для всех операций
-OP_PUSHPOP,   // регистровые пары для push и pop
-OP_PAIRBD,    // регистровая пара B или D
-OP_CCC,       // условие
-OP_RSTN,      // номер операции rst
-OP_BYTE,      // однобайтовый операнд
-OP_WORD,      // операнд-слово
-OP_ADDR       // адрес (для команд перехода и вызова)
+OP_NONE,      // РЅРµС‚ РѕРїРµСЂР°РЅРґР°
+OP_REG,       // СЂРµРіРёСЃС‚СЂРѕРІС‹Р№ РѕРїРµСЂР°РЅРґ (РµСЃР»Рё СЌС‚Рѕ op1 С‚Рѕ DDD РµСЃР»Рё op2 С‚Рѕ SSS)
+OP_REGPAIR,   // СЂРµРіРёСЃС‚СЂРѕРІС‹Рµ РїР°СЂС‹ РґР»СЏ РІСЃРµС… РѕРїРµСЂР°С†РёР№
+OP_PUSHPOP,   // СЂРµРіРёСЃС‚СЂРѕРІС‹Рµ РїР°СЂС‹ РґР»СЏ push Рё pop
+OP_PAIRBD,    // СЂРµРіРёСЃС‚СЂРѕРІР°СЏ РїР°СЂР° B РёР»Рё D
+OP_CCC,       // СѓСЃР»РѕРІРёРµ
+OP_RSTN,      // РЅРѕРјРµСЂ РѕРїРµСЂР°С†РёРё rst
+OP_BYTE,      // РѕРґРЅРѕР±Р°Р№С‚РѕРІС‹Р№ РѕРїРµСЂР°РЅРґ
+OP_WORD,      // РѕРїРµСЂР°РЅРґ-СЃР»РѕРІРѕ
+OP_ADDR       // Р°РґСЂРµСЃ (РґР»СЏ РєРѕРјР°РЅРґ РїРµСЂРµС…РѕРґР° Рё РІС‹Р·РѕРІР°)
 }operand_t;
 
 struct dte_tag {
@@ -44,8 +44,8 @@ operand_t op2;
 };
 
 
-/* Коды К580 в порядке Приложения 2 (за исключением HLT, чтобы избежать
-   результата MOV M,M
+/* РљРѕРґС‹ Рљ580 РІ РїРѕСЂСЏРґРєРµ РџСЂРёР»РѕР¶РµРЅРёСЏ 2 (Р·Р° РёСЃРєР»СЋС‡РµРЅРёРµРј HLT, С‡С‚РѕР±С‹ РёР·Р±РµР¶Р°С‚СЊ
+   СЂРµР·СѓР»СЊС‚Р°С‚Р° MOV M,M
  */
 struct dte_tag decode_tbl[] = {
   {0xff, 0x76, "HLT", OP_NONE, OP_NONE},
@@ -126,9 +126,9 @@ struct dte_tag decode_tbl[] = {
  };
 
 
-/* Дизасемблирование команды по заданому адресу.
-   Возвращает длинну текущей команды в байтах
-   и текст через указатель на структуру lpdr.
+/* Р”РёР·Р°СЃРµРјР±Р»РёСЂРѕРІР°РЅРёРµ РєРѕРјР°РЅРґС‹ РїРѕ Р·Р°РґР°РЅРѕРјСѓ Р°РґСЂРµСЃСѓ.
+   Р’РѕР·РІСЂР°С‰Р°РµС‚ РґР»РёРЅРЅСѓ С‚РµРєСѓС‰РµР№ РєРѕРјР°РЅРґС‹ РІ Р±Р°Р№С‚Р°С…
+   Рё С‚РµРєСЃС‚ С‡РµСЂРµР· СѓРєР°Р·Р°С‚РµР»СЊ РЅР° СЃС‚СЂСѓРєС‚СѓСЂСѓ lpdr.
  */
 int disas_addr(WORD addr, DISASRESULT *lpdr)
 {
@@ -136,12 +136,12 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
   char *op;
   int i;
 
-  // вывод адреса
+  // РІС‹РІРѕРґ Р°РґСЂРµСЃР°
   sprintf(lpdr->addr,"%04X",addr);
 
   opcode = MEM[addr++];
 
-  // помечаем строку с операндами как пустую
+  // РїРѕРјРµС‡Р°РµРј СЃС‚СЂРѕРєСѓ СЃ РѕРїРµСЂР°РЅРґР°РјРё РєР°Рє РїСѓСЃС‚СѓСЋ
   lpdr->ops[0] = '\0';
 
   lpdr->needloop = 0;
@@ -151,7 +151,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
     if ((opcode & decode_tbl[i].mask) != decode_tbl[i].code)
       continue;
 
-    // копируем текст мнемоники
+    // РєРѕРїРёСЂСѓРµРј С‚РµРєСЃС‚ РјРЅРµРјРѕРЅРёРєРё
     strcpy(lpdr->mnem, decode_tbl[i].mnem);
 
     switch (decode_tbl[i].op1)
@@ -159,7 +159,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
       case OP_NONE:
         break;
       case OP_REG:
-        // первый регистровый операнд назначения (DDD)
+        // РїРµСЂРІС‹Р№ СЂРµРіРёСЃС‚СЂРѕРІС‹Р№ РѕРїРµСЂР°РЅРґ РЅР°Р·РЅР°С‡РµРЅРёСЏ (DDD)
         strcpy(lpdr->ops, reg_name[(opcode & 0x38) >> 3]);
         break;
       case OP_REGPAIR:
@@ -172,7 +172,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         strcpy(lpdr->ops, pair_name[(opcode & 0x30) >> 4]);
         break;
       case OP_CCC:
-        // т.к. текст мнемоники уже скопирован, остается только дописать в конец текст условия
+        // С‚.Рє. С‚РµРєСЃС‚ РјРЅРµРјРѕРЅРёРєРё СѓР¶Рµ СЃРєРѕРїРёСЂРѕРІР°РЅ, РѕСЃС‚Р°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РґРѕРїРёСЃР°С‚СЊ РІ РєРѕРЅРµС† С‚РµРєСЃС‚ СѓСЃР»РѕРІРёСЏ
         strcpy(strchr(lpdr->mnem,0), ccc_name[(opcode & 0x38) >> 3]);
         break;
       case OP_RSTN:
@@ -181,11 +181,11 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         break;
       case OP_BYTE:
       case OP_WORD:
-        ui_error(0,"Ошибка в таблице decode_tbl: OP_WORD и OP_BYTE могут быть только вторым операдном!");
+        ui_error(0,"РћС€РёР±РєР° РІ С‚Р°Р±Р»РёС†Рµ decode_tbl: OP_WORD Рё OP_BYTE РјРѕРіСѓС‚ Р±С‹С‚СЊ С‚РѕР»СЊРєРѕ РІС‚РѕСЂС‹Рј РѕРїРµСЂР°РґРЅРѕРј!");
       break;
     }
 
-    // если до этого уже что-то печатали в операнды
+    // РµСЃР»Рё РґРѕ СЌС‚РѕРіРѕ СѓР¶Рµ С‡С‚Рѕ-С‚Рѕ РїРµС‡Р°С‚Р°Р»Рё РІ РѕРїРµСЂР°РЅРґС‹
     if (lpdr->ops[0] != '\0') {
       op = strchr(lpdr->ops,0);
     } else
@@ -200,7 +200,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
           *op++ = ',';
         else
           op = lpdr->ops;
-        // второй регистровый операнд- источник (SSS)
+        // РІС‚РѕСЂРѕР№ СЂРµРіРёСЃС‚СЂРѕРІС‹Р№ РѕРїРµСЂР°РЅРґ- РёСЃС‚РѕС‡РЅРёРє (SSS)
         strcpy(op, reg_name[opcode & 0x07]);
         return 1;
       case OP_BYTE:
@@ -225,7 +225,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
           w = MEM[addr++];
           w |= MEM[addr] << 8;
           sprintf(op,"%04X", (int)w);
-          /* если команда требует адрес, то устанавливаем флаг */
+          /* РµСЃР»Рё РєРѕРјР°РЅРґР° С‚СЂРµР±СѓРµС‚ Р°РґСЂРµСЃ, С‚Рѕ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С„Р»Р°Рі */
           if (decode_tbl[i].op2 == OP_ADDR) {
             lpdr->needloop = 1;
             lpdr->loopaddr = w;
@@ -239,15 +239,15 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
       case OP_RSTN:
       case OP_PUSHPOP:
       default:
-        ui_error(0,"Ошибка в таблице decode_tbl: \
-        OP_REGPAIR, OP_PAIRBD, OP_CCC, OP_RSTN, OP_PUSPPOP не могут быть вторым аргументом! \
-        (в строке %d второй аргумент %d", i, decode_tbl[i].op2);
+        ui_error(0,"РћС€РёР±РєР° РІ С‚Р°Р±Р»РёС†Рµ decode_tbl: \
+        OP_REGPAIR, OP_PAIRBD, OP_CCC, OP_RSTN, OP_PUSPPOP РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РІС‚РѕСЂС‹Рј Р°СЂРіСѓРјРµРЅС‚РѕРј! \
+        (РІ СЃС‚СЂРѕРєРµ %d РІС‚РѕСЂРѕР№ Р°СЂРіСѓРјРµРЅС‚ %d", i, decode_tbl[i].op2);
       return 1;
     }
 
   } /* for (i=0; ....*/
 
-  // если не нашли в таблице
+  // РµСЃР»Рё РЅРµ РЅР°С€Р»Рё РІ С‚Р°Р±Р»РёС†Рµ
   strcpy(lpdr->mnem, "*NOP");
   return 1;
 }
@@ -259,9 +259,9 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
 
 #if 0
 
-/* Дизасемблирование команды по заданому адресу.
-   Возвращает длинну текущей команды в байтах
-   и текст через указатель на структуру lpdr.
+/* Р”РёР·Р°СЃРµРјР±Р»РёСЂРѕРІР°РЅРёРµ РєРѕРјР°РЅРґС‹ РїРѕ Р·Р°РґР°РЅРѕРјСѓ Р°РґСЂРµСЃСѓ.
+   Р’РѕР·РІСЂР°С‰Р°РµС‚ РґР»РёРЅРЅСѓ С‚РµРєСѓС‰РµР№ РєРѕРјР°РЅРґС‹ РІ Р±Р°Р№С‚Р°С…
+   Рё С‚РµРєСЃС‚ С‡РµСЂРµР· СѓРєР°Р·Р°С‚РµР»СЊ РЅР° СЃС‚СЂСѓРєС‚СѓСЂСѓ lpdr.
  */
 int disas_addr(WORD addr, DISASRESULT *lpdr)
 {
@@ -275,7 +275,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
   char *DDD;
   char *CCC;
 
-  // вывод адреса
+  // РІС‹РІРѕРґ Р°РґСЂРµСЃР°
   sprintf(lpdr->loop,"%04X",addr);
 
   opcode = MEM[addr++];
@@ -291,13 +291,13 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
   strcpy(lpdr->mnem,"UNKN");
   strcpy(lpdr->ops,"");
 
-  // сортировка команд по первым двум битам
+  // СЃРѕСЂС‚РёСЂРѕРІРєР° РєРѕРјР°РЅРґ РїРѕ РїРµСЂРІС‹Рј РґРІСѓРј Р±РёС‚Р°Рј
   switch(opcode&0xc0)
   {
     /*  00?? ???? */
     case 0x00:
 
-      // загрузка регистра значением
+      // Р·Р°РіСЂСѓР·РєР° СЂРµРіРёСЃС‚СЂР° Р·РЅР°С‡РµРЅРёРµРј
       if ((opcode & 0xc7) == 0x06) {
         // 00 DDD 110   MVI rd,B2
         strcpy(lpdr->mnem, "MVI");
@@ -305,7 +305,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 2;
       }
 
-      // загрузка регистровой пары значением
+      // Р·Р°РіСЂСѓР·РєР° СЂРµРіРёСЃС‚СЂРѕРІРѕР№ РїР°СЂС‹ Р·РЅР°С‡РµРЅРёРµРј
       else if((opcode & 0xcf) == 0x01) {
         // 00 RR 0001  LXI rp,B2B3
         strcpy(lpdr->mnem, "LXI");
@@ -313,23 +313,23 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 3;
       }
 
-      // инкремент регистра
+      // РёРЅРєСЂРµРјРµРЅС‚ СЂРµРіРёСЃС‚СЂР°
       else if((opcode & 0xc7) == 0x04) {
         // 00 DDD 100  INR rd
         strcpy(lpdr->mnem, "INR");
-        sprintf(lpdr->ops,"%s", DDD);   // регистровый операнд
+        sprintf(lpdr->ops,"%s", DDD);   // СЂРµРіРёСЃС‚СЂРѕРІС‹Р№ РѕРїРµСЂР°РЅРґ
         return 1;
       }
 
-      // декремент регистра
+      // РґРµРєСЂРµРјРµРЅС‚ СЂРµРіРёСЃС‚СЂР°
       else if((opcode & 0xc7) == 0x05) {
         // 00 DDD 101  DCR rd
         strcpy(lpdr->mnem, "DCR");
-        sprintf(lpdr->ops,"%s",DDD);    // регистровый операнд
+        sprintf(lpdr->ops,"%s",DDD);    // СЂРµРіРёСЃС‚СЂРѕРІС‹Р№ РѕРїРµСЂР°РЅРґ
         return 1;
       }
 
-      // инкремент регистровой пары
+      // РёРЅРєСЂРµРјРµРЅС‚ СЂРµРіРёСЃС‚СЂРѕРІРѕР№ РїР°СЂС‹
       else if((opcode & 0xcf) == 0x03) {
         // 00 RR 0011  INX rp
         strcpy(lpdr->mnem, "INX");
@@ -337,7 +337,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // декремент регистровой пары
+      // РґРµРєСЂРµРјРµРЅС‚ СЂРµРіРёСЃС‚СЂРѕРІРѕР№ РїР°СЂС‹
       else if((opcode & 0xcf) == 0x0b) {
         // 00 RR 1011  DCX rp
         strcpy(lpdr->mnem, "DCX");
@@ -345,7 +345,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // сложение HL с регистровой парой
+      // СЃР»РѕР¶РµРЅРёРµ HL СЃ СЂРµРіРёСЃС‚СЂРѕРІРѕР№ РїР°СЂРѕР№
       else if((opcode & 0xcf) == 0x09) {
         // 00 RR 1001  DAD rp
         strcpy(lpdr->mnem, "DAD");
@@ -353,7 +353,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // прочие команды на 00?? ???? (без регистровых операндов)
+      // РїСЂРѕС‡РёРµ РєРѕРјР°РЅРґС‹ РЅР° 00?? ???? (Р±РµР· СЂРµРіРёСЃС‚СЂРѕРІС‹С… РѕРїРµСЂР°РЅРґРѕРІ)
       else {
         switch (opcode)
         {
@@ -440,21 +440,21 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
     /*  01?? ???? */
     case 0x40:
 
-      // остановка процессора
+      // РѕСЃС‚Р°РЅРѕРІРєР° РїСЂРѕС†РµСЃСЃРѕСЂР°
       if (opcode == 0x76) {
         // 0111 0110  HLT
         strcpy(lpdr->mnem, "HLT");
         return 1;
       }
 
-      // 01 DDD SSS - межрегистровые пересылки
+      // 01 DDD SSS - РјРµР¶СЂРµРіРёСЃС‚СЂРѕРІС‹Рµ РїРµСЂРµСЃС‹Р»РєРё
       strcpy(lpdr->mnem, "mov");
       sprintf(lpdr->ops,"%s,%s", DDD, SSS);
       return 1;
 
     /*  10?? ???? */
     case 0x80:
-      // прибавление регистра к аккумулятору
+      // РїСЂРёР±Р°РІР»РµРЅРёРµ СЂРµРіРёСЃС‚СЂР° Рє Р°РєРєСѓРјСѓР»СЏС‚РѕСЂСѓ
       if ((opcode & 0xf8) == 0x80) {
         // 1000 0SSS   ADD rs
         strcpy(lpdr->mnem, "ADD");
@@ -462,15 +462,15 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // прибавление регистра к аккумулятору с переносом
+      // РїСЂРёР±Р°РІР»РµРЅРёРµ СЂРµРіРёСЃС‚СЂР° Рє Р°РєРєСѓРјСѓР»СЏС‚РѕСЂСѓ СЃ РїРµСЂРµРЅРѕСЃРѕРј
       if ((opcode & 0xf8) == 0x88) {
-        // 1000 1SSS   ADС rs
-        strcpy(lpdr->mnem, "ADС");
+        // 1000 1SSS   ADРЎ rs
+        strcpy(lpdr->mnem, "ADРЎ");
         sprintf(lpdr->ops,"%s", SSS);
         return 1;
       }
 
-      // вычитание регистра из аккумулятора
+      // РІС‹С‡РёС‚Р°РЅРёРµ СЂРµРіРёСЃС‚СЂР° РёР· Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР°
       else if((opcode & 0xf8) == 0x90) {
         // 1001 0SSS   SUB rs
         strcpy(lpdr->mnem, "SUB");
@@ -478,7 +478,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // вычитание регистра из аккумулятора с переносом
+      // РІС‹С‡РёС‚Р°РЅРёРµ СЂРµРіРёСЃС‚СЂР° РёР· Р°РєРєСѓРјСѓР»СЏС‚РѕСЂР° СЃ РїРµСЂРµРЅРѕСЃРѕРј
       else if((opcode & 0xf8) == 0x98) {
         // 1001 1SSS   SBB rs
         strcpy(lpdr->mnem, "SBB");
@@ -486,7 +486,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // сравнение регистра с аккумулятором
+      // СЃСЂР°РІРЅРµРЅРёРµ СЂРµРіРёСЃС‚СЂР° СЃ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРј
       else if((opcode & 0xf8) == 0x90) {
         // 1011 1SSS   CMP rs
         strcpy(lpdr->mnem, "CMP");
@@ -494,7 +494,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // побитовое "и" регистра с аккумулятором
+      // РїРѕР±РёС‚РѕРІРѕРµ "Рё" СЂРµРіРёСЃС‚СЂР° СЃ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРј
       else if((opcode & 0xf8) == 0xa0) {
         // 1010 0SSS   ANA rs
         strcpy(lpdr->mnem, "ANA");
@@ -502,7 +502,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // побитовое "или" регистра с аккумулятором
+      // РїРѕР±РёС‚РѕРІРѕРµ "РёР»Рё" СЂРµРіРёСЃС‚СЂР° СЃ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРј
       else if((opcode & 0xf8) == 0xb0) {
         // 1011 0SSS   ORA rs
         strcpy(lpdr->mnem, "ORA");
@@ -510,7 +510,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // побитовое "исключающее или" регистра с аккумулятором
+      // РїРѕР±РёС‚РѕРІРѕРµ "РёСЃРєР»СЋС‡Р°СЋС‰РµРµ РёР»Рё" СЂРµРіРёСЃС‚СЂР° СЃ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРј
       else if((opcode & 0xf8) == 0xb8) {
         // 1010 1SSS   XRA rs
         strcpy(lpdr->mnem, "XRA");
@@ -522,7 +522,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
     /*  11?? ???? */
     case 0xc0:
 
-      // отправить регистровую пару в стек
+      // РѕС‚РїСЂР°РІРёС‚СЊ СЂРµРіРёСЃС‚СЂРѕРІСѓСЋ РїР°СЂСѓ РІ СЃС‚РµРє
       if ((opcode & 0xcf) == 0xc9) {
         // 11 RR 0101   PUSH rp
         strcpy(lpdr->mnem, "PUSH");
@@ -530,7 +530,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // снять регистровую пару с вершины стека
+      // СЃРЅСЏС‚СЊ СЂРµРіРёСЃС‚СЂРѕРІСѓСЋ РїР°СЂСѓ СЃ РІРµСЂС€РёРЅС‹ СЃС‚РµРєР°
       else if((opcode & 0xcf) == 0xc1) {
         // 11 RR 0001   POP rp
         strcpy(lpdr->mnem, "POP");
@@ -538,7 +538,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // условный переход
+      // СѓСЃР»РѕРІРЅС‹Р№ РїРµСЂРµС…РѕРґ
       else if((opcode & 0xc7) == 0xc2) {
         // 11 CCC 010   Jxx Adr
         sprintf(lpdr->mnem, "J%s", CCC);
@@ -554,7 +554,7 @@ int disas_addr(WORD addr, DISASRESULT *lpdr)
         return 1;
       }
 
-      // остальные команды
+      // РѕСЃС‚Р°Р»СЊРЅС‹Рµ РєРѕРјР°РЅРґС‹
       else {
         switch (opcode)
         {
