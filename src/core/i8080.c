@@ -2,7 +2,7 @@
 *  Ядро эмулятора- исполнение инструкций.
 *  За основу взято ядро популярного эмулятора Z80 fuse-emul
 */
-#include <windows.h>
+#include <stdio.h>
 
 #include "i8080.h"
 #include "i8080_macros.h"

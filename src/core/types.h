@@ -1,13 +1,13 @@
 #ifndef K580_TYPES_H
 #define K580_TYPES_H
 
-typedef   signed  char SBYTE;
-typedef unsigned  char  BYTE;
+#include <stdint.h>
 
-typedef   signed short SWORD;
-typedef unsigned short  WORD;
-
-typedef   signed  int SDWORD;
-typedef unsigned  int  DWORD;
+typedef int8_t SBYTE;
+typedef uint8_t BYTE;
+typedef int16_t SWORD;
+typedef uint16_t WORD;
+typedef int32_t SDWORD;
+typedef uint32_t DWORD;
 
 #endif

@@ -1,6 +1,8 @@
 #ifndef _I8080_MPSYS_H
 #define _I8080_MPSYS_H
 
+#include "types.h"
+
 /* режим установки задержки эмуляции */
 typedef enum {
 DELAY_NO = 0,  /* нет задержки */

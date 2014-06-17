@@ -5,6 +5,7 @@
 #ifndef _I8080_DISAS_H
 #define _I8080_DISAS_H
 //-------------------------------------------------------------------------
+#include "types.h"
 
 typedef struct {
 char addr[8];    // адрес в текстовом виде

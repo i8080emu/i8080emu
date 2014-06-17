@@ -1,6 +1,8 @@
 #ifndef _I8080_EVENT_H
 #define _I8080_EVENT_H
 
+#include "types.h"
+
 /* Information about an event */
 typedef struct event_t {
   DWORD tstates;

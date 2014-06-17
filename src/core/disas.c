@@ -2,13 +2,11 @@
 *  позволяющего программе дизасемблировать коды команд
 *  микропроцессора К580.
 */
-#include <windows.h>
 #include <stdio.h>
 #include <string.h>
+
 #include "disas.h"
 #include "mpsys.h"
-#include "gui.h"
-
 
 // названия регистров (для команд с регистровыми операндами)
 char *reg_name[8] = { "B","C","D","E","H","L","M","A" };

@@ -2,13 +2,12 @@
    (исполнение команд, память, ввод/вывод через порты,
    связь с внешними устройствами).
 */
-#include <windows.h>
+#include <stdio.h>
 
 #include "mpsys.h"
 #include "event.h"
 #include "i8080.h"
 #include "myglib.h"
-#include "gui.h"
 #include "breakpnt.h"
 #include "plugin.h"
 
