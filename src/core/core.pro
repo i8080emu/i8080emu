@@ -14,7 +14,6 @@ SOURCES += asm.c \
            breakpnt.c \
            disas.c \
            event.c \
-           gui.c \
            i8080.c \
            mpsys.c \
            myglib.c
@@ -23,7 +22,6 @@ HEADERS += asm.h \
            breakpnt.h \
            disas.h \
            event.h \
-           gui.h \
            i8080.h \
            i8080_macros.h \
            mpsys.h \
