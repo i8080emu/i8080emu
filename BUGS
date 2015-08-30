@@ -13,3 +13,27 @@
 + Если нажали на StepOver, а он до следующей строки не дошел (пришлось нажать Стоп), 
 то временную точку останова нужно снять!
 
+
+
+
+* possible already fixed in:
+commit 2992b9e2c8431780d0aeb94ad646313cf0ed6786
+Author: djv <djv>
+Date:   Wed Dec 31 20:11:46 2008 +0000
+
+P flag
+  F will never ZERO:
+  S   Z   0   AC   0   P   1   CY
+
+ i.e. start value: = 2
+  mvi a,1
+  mvi b,2
+  add b
+  ora a
+  ; will set P
+  hlt
+ in Z80, add not changes P
+ Р must be 1, but currently it is 0
+  Вообще, когда количество единиц в двоичном коде
+  чётное Р=1, когда нечётное Р=0
+
