@@ -97,5 +97,5 @@
 
 
 2003 Sashnov Alexander
-<sashnov@ngs.ru>
-http://sashnov.chat.ru
+<asashnov@rambler.ru>
+https://asashnov.github.io/

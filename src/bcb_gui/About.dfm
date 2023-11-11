@@ -72,7 +72,7 @@ object AboutForm: TAboutForm
     Top = 256
     Width = 113
     Height = 13
-    Caption = 'e-mail: sashnov@ngs.ru'
+    Caption = 'e-mail: asashnov@rambler.ru'
   end
   object StaticText1: TStaticText
     Left = 8
